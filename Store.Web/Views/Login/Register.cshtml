@@ -1,0 +1,83 @@
+﻿@model Store.Web.ViewModels.UserFormViewModel
+@{
+    ViewBag.Title = "Register";
+}
+
+@*<h2>Register</h2>
+    <form action="/action_page.php">
+        <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" class="form-control" id="name">
+        </div>
+        <div class="form-group">
+            <label for="lastname">LastName:</label>
+            <input type="text" class="form-control" id="lastname">
+        </div>
+        <div class="form-group">
+            <label for="email">Email address:</label>
+            <input type="email" class="form-control" id="email">
+        </div>
+        <div class="form-group">
+            <label for="email">confirm Email address:</label>
+            <input type="email" class="form-control" id="email">
+        </div>
+        <div class="form-group">
+            <label for="pwd">Password:</label>
+            <input type="password" class="form-control" id="pwd">
+        </div>
+        <div class="form-group">
+            <label for="pwd">repeat Password:</label>
+            <input type="password" class="form-control" id="pwd">
+        </div>
+        <div class="checkbox">
+            <label><input type="checkbox"> Remember me</label>
+        </div>
+        <button type="submit" class="btn btn-default">Submit</button>
+    </form>*@
+
+
+<h2>Registration Form</h2>
+<form action="@Url.Action("Register", "Login")" method="POST">
+    <label for="name">Name:</label><br>
+    <input type="text" id="name" name="name" required><br>
+
+    <label for="lastname">Last Name:</label><br>
+    <input type="text" id="lastname" name="lastname" required><br>
+
+    <label for="email">Email:</label><br>
+    <input type="email" id="email" name="email" required><br>
+
+    <label for="confirmEmail">Confirm Email:</label><br>
+    <input type="email" id="confirmEmail" name="confirmEmail" required><br>
+
+    <label for="password">Password:</label><br>
+    <input type="password" id="password" name="password" />
+    @*required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*\W).{12,}" title="Password must contain at least 12 characters, including at least one uppercase letter, one lowercase letter, one number, and one special symbol." onkeyup="validatePasswordStrength()"><br>*@
+
+    <label for="confirmPassword">Confirm Password:</label><br>
+    <input type="password" id="confirmPassword" name="confirmPassword" required><br>
+
+    <input type="submit" value="Register">
+</form>
+
+<script>
+    //var password = document.getElementById("password");
+    //var confirmPassword = document.getElementById("confirmPassword");
+
+    //function validatePassword() {
+    //    var passwordStrength = document.getElementById("passwordStrength");
+    //    var regex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*\W).{12,}$/;
+
+    //    if (regex.test(password.value)) {
+    //        password.style.borderColor = "green";
+    //    } else {
+    //        password.style.borderColor = "red";
+    //    }
+    //}
+
+    //password.onkeyup = validatePassword;
+</script>
+
+
+
+
