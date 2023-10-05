@@ -4,34 +4,43 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
-<input type="text" id="searchInput" onkeyup="search()" placeholder="Search for names...">
+<div class="container mt-5">
+    <h2 class="text-center">Genres</h2>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.Name)
-        </th>
-        <th></th>
-    </tr>
+    <div class="row">
+        <div class="col-md-6">
+            <input type="text" id="searchInput" onkeyup="search()" placeholder="Search for names..." class="form-control" />
+        </div>
+        <div class="col-md-6 text-right">
+            @Html.ActionLink("Create New", "Create", null, new { @class = "btn btn-primary" })
+        </div>
+    </div>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Name)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id = item.ID }) |
-            @Html.ActionLink("Details", "Details", new { id = item.ID }) |
-            @Html.ActionLink("Delete", "Delete", new { id = item.ID }, new { onclick = "return confirmDelete();" })
-        </td>
-    </tr>
-}
+    <table class="table mt-3">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th></th>
+        </tr>
 
-</table>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.ID }, new { @class = "btn btn-primary btn-sm" }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.ID }, new { @class = "btn btn-info btn-sm" }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.ID }, new { @class = "btn btn-danger btn-sm", onclick = "return confirmDelete();" })
+                </td>
+            </tr>
+        }
+
+    </table>
+</div>
+
 <script>
     function confirmDelete() {
         return confirm("Are you sure you want to delete this item?");

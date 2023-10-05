@@ -4,23 +4,22 @@
     ViewBag.Title = "Details";
 }
 
-<h2>Details</h2>
+<div class="container mt-5">
+    <h2 class="text-center">Language Details</h2>
 
-<div>
-    <h4>LanguageViewModel</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.Language)
-        </dt>
-
-        <dd>
+    <div class="row">
+        <div class="col-md-2">
+            <strong>Language:</strong>
+        </div>
+        <div class="col-md-10">
             @Html.DisplayFor(model => model.Language)
-        </dd>
+        </div>
+    </div>
 
-    </dl>
+    <div class="row mt-3">
+        <div class="col-md-offset-2 col-md-10">
+            @Html.ActionLink("Edit", "Edit", new { id = Model.ID }, new { @class = "btn btn-primary" }) |
+            @Html.ActionLink("Back to List", "Index", null, new { @class = "btn btn-secondary" })
+        </div>
+    </div>
 </div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>

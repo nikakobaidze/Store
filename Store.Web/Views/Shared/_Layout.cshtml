@@ -86,16 +86,16 @@
                                         <li><a href="#"> @Html.ActionLink(@item.MenuName, @item.ActionName, item.ControllerName, null, new { @class = "nav-link" })</a></li>
                                         @*<li>
 
-            </li>*@
+                                            </li>*@
 
-                                       
+
                                     }
                                 </ul>
                             </li>
                         }
                         else
                         {
-                                  <li>@Html.ActionLink(menu.MenuName, menu.ActionName, menu.ControllerName, null, new { @class = "nav-link" })</li>
+                            <li>@Html.ActionLink(menu.MenuName, menu.ActionName, menu.ControllerName, null, new { @class = "nav-link" })</li>
                         }
 
 
@@ -138,3 +138,4 @@
     @Scripts.Render("~/bootstrap/js")
 </body>
 </html>
+

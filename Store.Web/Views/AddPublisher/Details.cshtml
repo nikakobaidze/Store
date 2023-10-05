@@ -4,47 +4,51 @@
     ViewBag.Title = "Details";
 }
 
-<h2>Details</h2>
+<div class="container mt-5">
+    <h2 class="text-center">Publisher Details</h2>
 
-<div>
-    <h4>PublisherViewModel</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.Name)
-        </dt>
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <h4>Publisher Details</h4>
+                    <hr />
+                    <dl class="dl-horizontal">
+                        <dt>
+                            @Html.DisplayNameFor(model => model.Name)
+                        </dt>
+                        <dd>
+                            @Html.DisplayFor(model => model.Name)
+                        </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.Name)
-        </dd>
+                        <dt>
+                            @Html.DisplayNameFor(model => model.Address)
+                        </dt>
+                        <dd>
+                            @Html.DisplayFor(model => model.Address)
+                        </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Address)
-        </dt>
+                        <dt>
+                            @Html.DisplayNameFor(model => model.PhoneNumber)
+                        </dt>
+                        <dd>
+                            @Html.DisplayFor(model => model.PhoneNumber)
+                        </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.Address)
-        </dd>
+                        <dt>
+                            @Html.DisplayNameFor(model => model.Email)
+                        </dt>
+                        <dd>
+                            @Html.DisplayFor(model => model.Email)
+                        </dd>
+                    </dl>
+                </div>
+            </div>
+        </div>
+    </div>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.PhoneNumber)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.PhoneNumber)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Email)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Email)
-        </dd>
-
-    </dl>
+    <div class="text-center">
+        @Html.ActionLink("Edit", "Edit", new { id = Model.ID }, new { @class = "btn btn-primary" }) |
+        @Html.ActionLink("Back to List", "Index", null, new { @class = "btn btn-default" })
+    </div>
 </div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>
