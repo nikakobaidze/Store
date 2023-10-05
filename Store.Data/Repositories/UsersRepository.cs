@@ -37,6 +37,12 @@ namespace Store.Data.Repositories
 
             return User;
         }
+        public Users GetUserByConfirmationToken(string ConfirmationToken)
+        {
+            var User = this.DbContext.Users.Where(c => c.ConfirmationToken == ConfirmationToken).FirstOrDefault();
+
+            return User;
+        }
 
 
         public override void Update(Users entity)
@@ -52,6 +58,7 @@ namespace Store.Data.Repositories
         Users GetUserByUserRoleID(int UserRoleID);
         Users GetUserByUserName(string UserName);
         Users GetUserByUserRoleTitle(string UserRoleTitle);
+        Users GetUserByConfirmationToken(string ConfirmationToken);
 
     }
 }

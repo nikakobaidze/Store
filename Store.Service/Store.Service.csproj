@@ -49,11 +49,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AuthorService.cs" />
+    <Compile Include="BookService.cs" />
     <Compile Include="BooksService.cs" />
     <Compile Include="CategoryService.cs" />
     <Compile Include="GadgetService.cs" />
+    <Compile Include="GenreService.cs" />
+    <Compile Include="LanguageService.cs" />
     <Compile Include="MenuService.cs" />
+    <Compile Include="PositionService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PublisherService.cs" />
+    <Compile Include="ShelveService.cs" />
     <Compile Include="UsersService.cs" />
   </ItemGroup>
   <ItemGroup>

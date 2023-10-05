@@ -1,0 +1,74 @@
+﻿@model Store.Web.ViewModels.BookViewModel
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>BookViewModel</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Title)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Title)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PublicationDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PublicationDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Edition)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Edition)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PageNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PageNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TotalCopies)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TotalCopies)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AvialableCopies)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AvialableCopies)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ISBN)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ISBN)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

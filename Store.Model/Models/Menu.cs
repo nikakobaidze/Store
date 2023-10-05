@@ -14,5 +14,7 @@ namespace Store.Model.Models
         public List<RoleMenu> RoleMenus { get; set; }
         public int ParrentMenuItemID { get; set; }
         public string url { get; set; }
+        public string ControllerName { get; set; }
+        public string ActionName { get; set; }
     }
 }

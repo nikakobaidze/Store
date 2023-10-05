@@ -7,6 +7,8 @@ using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web;
+
 
 
 
@@ -14,7 +16,7 @@ namespace Store.Data
 {
     public class StoreEntities : DbContext
     {
-        public StoreEntities() : base(@"Data Source=DESKTOP-LNFCMVA\SQLEXPRESS;Initial Catalog=Libraryyy;Integrated Security=True") { }
+        public StoreEntities() : base(@"Data Source=DESKTOP-LNFCMVA\SQLEXPRESS;Initial Catalog=Library2;Integrated Security=True") { }
 
         public DbSet<Authors> Authors { get; set; }
         public DbSet<Category> Categories { get; set; }
@@ -46,7 +48,7 @@ namespace Store.Data
         {
             base.SaveChanges();
         }
-
+        
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
@@ -54,5 +56,49 @@ namespace Store.Data
             modelBuilder.Configurations.Add(new GadgetConfiguration());
             modelBuilder.Configurations.Add(new CategoryConfiguration());
         }
+
+        //public System.Data.Entity.DbSet<Store.Web.ViewModels.ShalvesViewModel> ShalvesViewModels { get; set; }
+
+        //public System.Data.Entity.DbSet<Store.Web.ViewModels.ShalvesViewModel> ShalvesViewModels { get; set; }
+
+        //public System.Data.Entity.DbSet<Store.Web.ViewModels.PossitionViewModel> PossitionViewModels { get; set; }
+
+        //public System.Data.Entity.DbSet<Store.Web.ViewModels.LanguageViewModel> LanguageViewModels { get; set; }
+
+        //public System.Data.Entity.DbSet<Store.Web.ViewModels.GenreViewModel> GenreViewModels { get; set; }
+
+        // public System.Data.Entity.DbSet<Store.Web.ViewModels.GenreViewModel> GenreViewModels { get; set; }
+
+        //public System.Data.Entity.DbSet<Store.Web.ViewModels.BookViewModel> BookViewModels { get; set; }
+
+        //public System.Data.Entity.DbSet<Store.Web.ViewModels.BookViewModel> BookViewModels { get; set; }
+
+        //public System.Data.Entity.DbSet<Store.Web.ViewModels.BookViewModel> BookViewModels { get; set; }
+
+        //public System.Data.Entity.DbSet<Store.Web.ViewModels.AuthorViewModel> AuthorViewModels { get; set; }
+
+        // public System.Data.Entity.DbSet<Store.Web.ViewModels.AuthorViewModel> AuthorViewModels { get; set; }
+
+        //public System.Data.Entity.DbSet<Store.Web.ViewModels.AuthorViewModel> AuthorViewModels { get; set; }
+
+        //public System.Data.Entity.DbSet<Store.Web.ViewModels.AuthorViewModel> AuthorViewModels { get; set; }
+
+        //public System.Data.Entity.DbSet<Store.Web.ViewModels.PublisherViewModel> PublisherViewModels { get; set; }
+
+        // public System.Data.Entity.DbSet<Store.Web.ViewModels.AuthorViewModel> AuthorViewModels { get; set; }
+
+        //public System.Data.Entity.DbSet<Store.Web.ViewModels.AuthorViewModel> AuthorViewModels { get; set; }
+
+        // public System.Data.Entity.DbSet<Store.Data.ViewModels.AuthorViewModel> AuthorViewModels { get; set; }
+
+        //
+        //public System.Data.Entity.DbSet<Store.Web.ViewModels.PublisherViewModel> PublisherViewModels { get; set; }
+
+        //public System.Data.Entity.DbSet<Store.Web.ViewModels.PublisherViewModel> PublisherViewModels { get; set; }
+
+        //public System.Data.Entity.DbSet<Store.Web.ViewModels.AuthorViewModel> AuthorViewModels { get; set; }
+
+        //public System.Data.Entity.DbSet<Store.Web.ViewModels.AuthorViewModel> AuthorViewModels { get; set; }
     }
 }
+

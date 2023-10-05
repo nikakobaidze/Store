@@ -19,6 +19,7 @@ namespace Store.Model.Models
         public string IPAdress { get; set; }
         public DateTime? RegistrationDate { get; set; }
         public bool? IsActive { get; set; }
+       // public int MyProperty { get; set; }
         public string UserRoleTitle { get; set; }
         public DateTime? CreateDate { get; set; }
         public DateTime? ChangeDate { get; set; }

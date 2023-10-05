@@ -14,5 +14,6 @@ namespace Store.Model.Models
         public DateTime? ChangeDate { get; set; }
         public DateTime? DelteDate { get; set; }
         public virtual List<BookGenres> BookGenres { get; set; }
+        //public virtual List<BookLanguages> BookLanguages { get; set; }
     }
 }

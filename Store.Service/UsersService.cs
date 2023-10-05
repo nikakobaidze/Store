@@ -107,7 +107,7 @@ namespace Store.Service
 
         public bool VerifyConfirmationToken(int userId, string token)
         {
-            var user = UsersRepository.GetById(userId);
+            var user = UsersRepository.GetUserByConfirmationToken(token);
             return user != null && user.ConfirmationToken == token;
         }
     }

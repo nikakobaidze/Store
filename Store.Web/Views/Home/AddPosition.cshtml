@@ -1,0 +1,50 @@
+﻿
+@{
+    ViewBag.Title = "AddPosition";
+}
+
+
+<table>
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Description</th>
+            <th>Salary</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @for (int i = 0; i < Model.Count; i++)
+        {
+            <tr>
+                <td contenteditable="true">@Model[i].Title</td>
+                <td contenteditable="true">@Model[i].Description</td>
+                <td contenteditable="true">@Model[i].Salary</td>
+                <td>
+                    <button type="button" onclick="removeRow(@i)">Remove</button>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<button type="button" onclick="addRow()">Add New Row</button>
+
+<script>
+    function addRow() {
+        var newRow = '<tr>' +
+            '<td contenteditable="true"></td>' +
+            '<td contenteditable="true"></td>' +
+            '<td contenteditable="true"></td>' +
+            '<td><button type="button" onclick="removeRow(this)">Remove</button></td>' +
+            '</tr>';
+
+        $('table tbody').append(newRow);
+    }
+
+    function removeRow(row) {
+        $(row).closest('tr').remove();
+    }
+</script>
+
+
